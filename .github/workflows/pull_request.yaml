@@ -44,4 +44,4 @@ jobs:
       - name: Run test
         run: |
           cd js
-          npm i
+          npm run test
