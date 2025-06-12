@@ -31,7 +31,8 @@ jobs:
       - name: Install dependencies
         run: |
           cd js
-          npm i --legacy-peer-deps
+          npm i
+
 
       - name: Save node_modules cache
         if: steps.cache.outputs.cache-hit != 'true'
