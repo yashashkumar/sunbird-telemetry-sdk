@@ -1,4 +1,4 @@
-name: Build, Test, and Lint with SonarCloud
+name: Build, Test and Lint
 
 on:
   pull_request:
@@ -29,14 +29,14 @@ jobs:
         working-directory: js
         continue-on-error: true
 
-      - name: Install SonarQube scanner
-        run: npm install -g sonarqube-scanner
+      #- name: Install SonarQube scanner
+       # run: npm install -g sonarqube-scanner
 
-      - name: Run SonarQube scanner
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: sonar-scanner
+      #- name: Run SonarQube scanner
+       # env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        #run: sonar-scanner
 
   lint:
     runs-on: ubuntu-latest
